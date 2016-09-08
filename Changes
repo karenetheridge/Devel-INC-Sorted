@@ -1,5 +1,7 @@
 Revision history for Devel-INC-Sorted
 
+{{$NEXT}}
+
 0.02          2008-06-26
               - Requires Perl 5.8 and above (stable sort)
 

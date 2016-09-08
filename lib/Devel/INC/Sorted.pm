@@ -1,4 +1,6 @@
 package Devel::INC::Sorted;
+# ABSTRACT: Keep your hooks in the begining of @INC
+
 use base qw(Exporter Tie::Array);
 
 use strict;
@@ -158,10 +160,6 @@ __END__
 
 =pod
 
-=head1 NAME
-
-Devel::INC::Sorted - Keep your hooks in the begining of C<@INC>
-
 =head1 SYNOPSIS
 
 	use Devel::INC::Sorted qw(inc_add_floating);
@@ -211,22 +209,4 @@ modifications to C<@INC> will not cause resorting to happen.
 
 =back
 
-=head1 VERSION CONTROL
-
-This module is maintained using Darcs. You can get the latest version from
-L<http://nothingmuch.woobling.org/code>, and use C<darcs send> to commit
-changes.
-
-=head1 AUTHOR
-
-Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
-
-=head1 COPYRIGHT
-
-	Copyright (c) 2008 Yuval Kogman. All rights reserved
-	This program is free software; you can redistribute
-	it and/or modify it under the same terms as Perl itself.
-
 =cut
-
-
