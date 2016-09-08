@@ -1,5 +1,3 @@
-#!/usr/bin/perl
-
 package Devel::INC::Sorted;
 use base qw(Exporter Tie::Array);
 
