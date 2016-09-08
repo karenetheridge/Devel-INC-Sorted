@@ -1,5 +1,7 @@
-0.02
-		- Requires Perl 5.8 and above (stable sort)
+Revision history for Devel-INC-Sorted
 
-0.01
-		- Initial release
+0.02          2008-06-26
+              - Requires Perl 5.8 and above (stable sort)
+
+0.01          2008-01-29
+              - Initial release
