@@ -1,13 +1,14 @@
 package Devel::INC::Sorted;
 # ABSTRACT: Keep your hooks in the beginning of @INC
 
-use base qw(Exporter Tie::Array);
+use base 'Tie::Array';
 
 use strict;
 use warnings;
 
 use sort 'stable';
 
+use Exporter;
 use Scalar::Util qw(blessed reftype);
 use Tie::RefHash;
 
@@ -20,7 +21,7 @@ tie our %floating, 'Tie::RefHash';
 sub import {
 	my ( $self, @args ) = @_;
 	$self->tie_inc( grep { ref } @args ); # if a code ref is given, pass it to TIEARRAY
-	$self->export_to_level(1, $self, @args);
+	goto &Exporter::import;
 }
 
 sub _args {
