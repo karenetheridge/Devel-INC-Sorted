@@ -1,5 +1,5 @@
 package Devel::INC::Sorted;
-# ABSTRACT: Keep your hooks in the begining of @INC
+# ABSTRACT: Keep your hooks in the beginning of @INC
 
 use base qw(Exporter Tie::Array);
 
@@ -79,7 +79,7 @@ sub untie_inc {
 
 # This code was adapted from Tie::Array::Sorted::Lazy
 # the reason it's not a subclass is because neither ::Sorted nor ::Sorted::Lazy
-# provide a stably sorted array, which is bad for our default comparator
+# provide a stably sorted array, which is bad for our default comparison operator
 
 sub TIEARRAY {
 	my ( $class, $comparator, @orig ) = @_;
@@ -178,8 +178,8 @@ __END__
 
 This module keeps C<@INC> sorted much like L<Tie::Array::Sorted>.
 
-The default comparator partitions the members into floating and non floating,
-allowing you to easily keep certain hooks in the begining of C<@INC>.
+The default comparison operator partitions the members into floating and non floating,
+allowing you to easily keep certain hooks in the beginning of C<@INC>.
 
 The sort used is a stable one, to make sure that the order of C<@INC> for
 unsorted items remains unchanged.
@@ -196,7 +196,7 @@ Add entries to C<@INC> and call C<inc_float_entry> on them.
 
 =item inc_float_entry
 
-Mark the arguments as floating (in the internal refhash).
+Mark the arguments as floating (in the internal hashref).
 
 =item inc_unfloat_entry
 
