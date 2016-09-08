@@ -49,7 +49,7 @@ sub inc_add_floating {
 
 sub inc_float_entry {
 	my ( $self, @args ) = &_args;
-	
+
 	@floating{@args} = ( (1) x @args );
 
 	$self->_fixup;
@@ -126,8 +126,8 @@ sub FETCH {
 	$_[0]->{array}->[ $_[1] ];
 }
 
-sub FETCHSIZE { 
-	scalar @{ $_[0]->{array} } 
+sub FETCHSIZE {
+	scalar @{ $_[0]->{array} }
 }
 
 sub STORESIZE {
@@ -150,8 +150,8 @@ sub DELETE {
 	delete $_[0]->{array}->[ $_[1] ];
 }
 
-sub CLEAR { 
-	@{ $_[0]->{array} } = () 
+sub CLEAR {
+	@{ $_[0]->{array} } = ()
 }
 
 __PACKAGE__
