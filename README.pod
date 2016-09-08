@@ -1,0 +1,84 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Devel::INC::Sorted - Keep your hooks in the beginning of @INC
+
+=head1 VERSION
+
+version 0.03
+
+=head1 SYNOPSIS
+
+	use Devel::INC::Sorted qw(inc_add_floating);
+
+	inc_add_floating( \&my_inc_hook );
+	unshift @INC, \&other_hook;
+
+	use lib 'blah';
+
+	push @INC, 'foo';
+
+	warn $INC[0]; # this is still \&my_inc_hook
+	warn $INC[3]; # but \&other_hook was moved down to here
+
+=head1 DESCRIPTION
+
+This module keeps C<@INC> sorted much like L<Tie::Array::Sorted>.
+
+The default comparison operator partitions the members into floating and non floating,
+allowing you to easily keep certain hooks in the beginning of C<@INC>.
+
+The sort used is a stable one, to make sure that the order of C<@INC> for
+unsorted items remains unchanged.
+
+=head1 EXPORTS
+
+All exports are optional
+
+=over 4
+
+=item inc_add_floating
+
+Add entries to C<@INC> and call C<inc_float_entry> on them.
+
+=item inc_float_entry
+
+Mark the arguments as floating (in the internal hashref).
+
+=item inc_unfloat_entry
+
+Remove the items from the hash.
+
+=item untie_inc
+
+Untie C<@INC>, leaving all it's current elements in place. Further
+modifications to C<@INC> will not cause resorting to happen.
+
+=back
+
+=head1 SUPPORT
+
+Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Devel-INC-Sorted>
+(or L<bug-Devel-INC-Sorted@rt.cpan.org|mailto:bug-Devel-INC-Sorted@rt.cpan.org>).
+
+=head1 AUTHOR
+
+יובל קוג'מן (Yuval Kogman) <nothingmuch@woobling.org>
+
+=head1 CONTRIBUTOR
+
+=for stopwords Karen Etheridge
+
+Karen Etheridge <ether@cpan.org>
+
+=head1 COPYRIGHT AND LICENCE
+
+This software is copyright (c) 2008 by יובל קוג'מן (Yuval Kogman).
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

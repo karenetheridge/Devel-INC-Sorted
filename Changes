@@ -1,6 +1,6 @@
 Revision history for Devel-INC-Sorted
 
-{{$NEXT}}
+0.03      2016-09-08 03:04:35Z
               - fix use of Exporter that breaks with newer Test::More in tests
                 (RT#117544)
 
