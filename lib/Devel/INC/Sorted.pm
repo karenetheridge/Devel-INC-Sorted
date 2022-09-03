@@ -6,8 +6,6 @@ use base 'Tie::Array';
 use strict;
 use warnings;
 
-use sort 'stable';
-
 use Exporter;
 use Scalar::Util qw(blessed reftype);
 use Tie::RefHash;
