@@ -10,7 +10,7 @@ use Exporter;
 use Scalar::Util qw(blessed reftype);
 use Tie::RefHash;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 our @EXPORT_OK = qw(inc_add_floating inc_float_entry inc_unfloat_entry untie_inc);
 
