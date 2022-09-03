@@ -8,7 +8,7 @@ Devel::INC::Sorted - Keep your hooks in the beginning of @INC
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -68,11 +68,21 @@ Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Di
 
 יובל קוג'מן (Yuval Kogman) <nothingmuch@woobling.org>
 
-=head1 CONTRIBUTOR
+=head1 CONTRIBUTORS
 
-=for stopwords Karen Etheridge
+=for stopwords Karen Etheridge José Joaquín Atria
+
+=over 4
+
+=item *
 
 Karen Etheridge <ether@cpan.org>
+
+=item *
+
+José Joaquín Atria <jjatria@gmail.com>
+
+=back
 
 =head1 COPYRIGHT AND LICENCE
 

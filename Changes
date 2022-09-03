@@ -1,6 +1,6 @@
 Revision history for Devel-INC-Sorted
 
-{{$NEXT}}
+0.04      2022-09-03 17:33:13Z
           - drop discouraged (and no-op) sort pragma - thanks José Joaquín
             Atria! (PR #1)
 
